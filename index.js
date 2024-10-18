@@ -87,9 +87,9 @@ function startAnimation() {
     const nameElement = document.getElementById('name');
     const roleElement = document.getElementById('role');
 
-    typeText(nameElement, 'Kelompok 5', () => {
+    typeText(nameElement, 'Kelompok 8', () => {
         setTimeout(() => {
-            typeTextBackward(nameElement, 'Kelompok 5', () => {
+            typeTextBackward(nameElement, 'Kelompok 8', () => {
                 typeText(roleElement, 'Calon Aktivis', () => {
                     setTimeout(() => {
                         typeTextBackward(roleElement, 'Calon Aktivis', startAnimation);
