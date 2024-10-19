@@ -329,7 +329,7 @@ header.scrolled {
     transform: rotate(10deg);
 }
 
-.about-me-image{
+.about-event-image{
     height: 400px;
     width: 300px;
     border-radius: 50px;
@@ -365,8 +365,16 @@ header.scrolled {
     color: #fafafa;
 }
 
-.event-experience-block{
-    opacity: 0;
+.event-theme-container {
+    display: flex; /* Use flexbox for the theme blocks */
+    align-items: center;
+    justify-content: flex-start; /* Align items to the start */
+    gap: 20px; /* Space between theme blocks */
+    margin: 20px 0; /* Margin for spacing */
+}
+
+.event-theme-block {
+    opacity: 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -375,38 +383,35 @@ header.scrolled {
     border-radius: 10px;
     width: 130px;
     height: 120px;
-    margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s;
 }
 
-.event-experience-block a{
+.event-theme-block:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.event-theme-block a {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
 }
 
-.fa-award{
-    font-size: 30px;
-    padding-bottom: 10px;
-    background: linear-gradient(to right, #2f9acf, #0ccfd3);
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-}
-
-.event-experience-title{
+.event-theme-title {
     font-size: 16px;
     font-weight: 500;
     color: #fafafa;
 }
 
-.event-experience-subtitle{
+.event-theme-subtitle {
     font-size: 12px;
 }
 
 .event-about-text-subtext{
     font-size: 15px;
     font-weight: 350;
+    margin-top: 20px; /* Add margin to separate from theme blocks */
 }
 
 .event-sponsors{
@@ -575,7 +580,7 @@ header.scrolled {
 .progress-line-short {
     content: "";
     height: 2px; /* Height of the short line */
-    width: 50px; /* Fixed width for short line */
+    width: 100px; /* Fixed width for short line */
     background-color: #7F92B0;
     margin: 0 5px; /* Space around the short line */
 }
@@ -589,15 +594,18 @@ header.scrolled {
     margin: 0 5px; /* Space around the circle */
 }
 
-.event-profile{
+.event-profile {
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: space-between;
     gap: 50px;
     margin-top: 20px;
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    padding: 0 20px; /* Add padding to prevent content from touching the edges */
+    box-sizing: border-box; /* Include padding in the element's total width */
 }
 
-.event-profile div{
+.event-profile div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -605,10 +613,11 @@ header.scrolled {
     width: 300px; /* Default width */
     flex: 1; /* Allow items to grow and shrink */
     min-width: 250px; /* Minimum width for smaller screens */
-    max-width: 300px; /* Maximum width */
+    max-width: 100%; /* Allow the div to take full width of its container */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
 }
 
-.event-profile-title{
+.event-profile-title {
     opacity: 1;
     display: flex;
     align-items: center;
@@ -617,7 +626,7 @@ header.scrolled {
     font-size: 20px;
 }
 
-.event-profile-subtitle{
+.event-profile-subtitle {
     opacity: 1;
     display: flex;
     align-items: center;
@@ -631,7 +640,7 @@ header.scrolled {
     font-weight: 450;
 }
 
-.event-profile-date{
+.event-profile-date {
     opacity: 1;
     display: flex;
     align-items: center;

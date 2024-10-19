@@ -33,7 +33,7 @@ const items = document.querySelectorAll(
     '.event-profile-picture, ' +
     '.event-about-text a, ' +
     '.event-about-picture, ' +
-    '.experience-block, ' +
+    '.event-theme-block, ' +
     '.event-sponsors-title, ' +
     '.event-sponsors-subtitle, ' +
     '.event-sponsors-content, ' +
